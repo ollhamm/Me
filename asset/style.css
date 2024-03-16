@@ -1,0 +1,619 @@
+body {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#navbarTogglerBtn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+/* Grafik belakang foto */
+.circle {
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-right: 9rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: none;
+}
+span{
+    color: #0f72b4;
+}
+
+.circle img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+.bg-image {
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  height: auto;
+}
+.bg-image img {
+  transition: transform 0.5s ease;
+}
+.bg-image:hover img {
+  transform: scale(1.2);
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+
+/* Home kiri */
+.content-left {
+  flex: 1;
+  text-align: left;
+  margin-left: 6rem;
+  margin-top: 7rem;
+}
+h1 {
+  margin: 0;
+  font-size: 3rem;
+}
+p {
+    font-size: 20px;
+}
+
+.hubungi_Kami button {
+    background-color: #0f72b4;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    width: 115px;
+    height: 50px;
+}
+button:active {
+    transform: scale(0.95);
+}
+
+.content-right {
+  margin-left: 20px; 
+}
+
+/* icon */
+.icon i{
+    margin-top: 9rem;
+    font-size: 30px;
+    color: #000;
+}
+.icon a:not(:first-child) {
+    margin-left: 1rem;
+}
+
+/* ABOUT ME */
+.aboutMe h3{
+    margin-top: 12rem;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px; 
+    padding: 8rem;
+}
+.image-about {
+  flex: 1; 
+  margin-bottom: 6rem;
+  max-width: 300px; 
+}
+.image-about img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
+}
+ .text-about{
+        flex: 1; 
+        max-width: 500px; 
+    }
+
+/*BUTTON DOWNLOAD */
+.download-cv button {
+    background-color: #0f72b4;
+    color: #fff;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+button:active {
+    transform: scale(0.95);
+}
+
+/* SKILL KONTAINER */
+.skill-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill {
+  width: 45%; 
+}
+
+/* SKILL */
+.skillMe h3{
+    margin-top: 10rem;
+    text-align: center;
+    justify-content: center;
+}
+.skill {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px; 
+    padding: 8rem;
+}
+.icon-skill{
+  font-size: 20px;
+  margin-left: 8rem;
+}
+.icon-skill p{
+  font-size: 16px;
+}
+
+/* HTML */
+#progressbarHtml {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarHtml>div {
+  background-color: #0f72b4;
+  width: 70%;
+  height: 20px;
+  border-radius: 10px;
+}
+/* CSS */
+#progressbarCss {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarCss>div {
+  background-color: #0f72b4;
+  width: 85%;
+  height: 20px;
+  border-radius: 10px;
+}
+/* JS */
+#progressbarJs {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarJs>div {
+  background-color: #0f72b4;
+  width: 70%;
+  height: 20px;
+  border-radius: 10px;
+}
+/* REACT */
+#progressbarReact {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarReact>div {
+  background-color: #0f72b4;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+
+/* BACK END */
+.icon-skill-backend{
+  font-size: 20px;
+}
+.icon-skill-backend p{
+  font-size: 16px;
+}
+#progressbarPy {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarPy>div {
+  background-color: #0f72b4;
+  width: 85%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* SERVICES */
+.services h3{
+    margin-top: 5rem;
+    text-align: center;
+    justify-content: center;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-content,
+.card-back {
+  margin-top: 1rem;
+  font-size: 32px;
+  padding: 16px;
+  text-align: center;
+  margin: 10px;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.card-content p,
+.card-back p {
+  text-align: center;
+  font-size: 11px;
+  color: #000;
+  transform: scaleX(1);
+}
+
+.card-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  backface-visibility: hidden;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-content {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-content p {
+  transform: scaleX(-1);
+}
+
+.card.flipped .card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: scaleX(-1);
+}
+
+.card.flipped .card-back p {
+  transform: rotateY(0deg);
+  margin-left: 1rem;
+  margin: 2px;
+}
+
+/* porto */
+.porto h3{
+    margin-top: 9rem;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.porto p {
+  text-align: center;
+  font-size: 12px;
+}
+/* CONTACT ME */
+.contact h3{
+    margin-top: 14rem;
+    padding-bottom: 5px;
+    text-align: center;
+    justify-content: center;
+}
+.kontak{
+  margin-top: 10rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 5rem auto;
+}
+.kontak .content-kontak{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kontak .content-kontak .left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.content-kontak .left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
+}
+.content-kontak .left-side .details{
+  margin: 14px;
+  text-align: center;
+}
+.content-kontak .left-side .details i{
+  font-size: 30px;
+  color: #0f72b4;
+  margin-bottom: 10px;
+}
+.content-kontak .left-side .details .topic{
+  font-size: 13px;
+  font-weight: 500;
+}
+.content-kontak .left-side .details .text-one,
+.content-kontak .left-side .details .text-two{
+  font-size: 12px;
+  color: #0f72b4;
+}
+.kontak .content-kontak .right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.content-kontak .right-side .topic-text{
+  font-size: 23px;
+  font-weight: 600;
+  color: #0f72b4;
+}
+
+.right-side .input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.right-side .input-box input,
+.right-side .input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.right-side .message-box{
+  min-height: 110px;
+}
+.right-side .input-box textarea{
+  padding-top: 6px;
+}
+.right-side .button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.right-side .button input[type="submit"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #0f72b4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button input[type="button"]:hover{
+  background: #0f72b4;
+}
+
+
+/* DARK MODE */
+.dark-mode {
+  background-color: #000 !important; 
+  color: #fff !important; /
+}
+#darkModeToggle {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  transition: color 0.3s ease;
+}
+.dark-mode #darkModeToggle {
+  color: #fff; 
+}
+#darkModeToggle.dark-mode {
+  color: #fff;
+}
+.dark-mode .navbar-nav .nav-link {
+  color: #fff !important;
+}
+.dark-mode .navbar-brand {
+    color: #fff !important;
+}
+.dark-mode .icon i {
+    color: #0f72b4;
+}
+.dark-mode .navbar-toggler{
+    color: #fff;
+    background-color: #fff;
+}
+.dark-mode .card {
+    color: #0f72b4;
+}
+.dark-mode .kontak{
+  color: #fff;
+  background-color: #000;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-left {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .circle {
+    margin: 1rem auto 0 auto;
+    width: 200px;
+    height: 200px;
+  }
+
+  /* ABOUT  */
+  .about {
+    padding: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-about {
+    flex: 1;
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+
+  .text-about {
+    flex: 1;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 10px;
+  }
+  .text-about p {
+    font-size: 12px;
+  }
+
+  .icons-about {
+    margin-top: 10px;
+  }
+
+  /* SKILL */
+  .skill {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .icon-skill,
+  .icon-skill-backend {
+    font-size: 12px;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .icon-skill p,
+  .icon-skill-backend p {
+    font-size: 11px;
+  }
+
+  .progress-bar-container>div {
+    height: 10px;
+  }
+   .icon-skill-backend {
+    font-size: 12px;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+   .card {
+    width: 100%;
+  }
+
+  .card-content {
+    font-size: 20px; 
+  }
+  .card-content p{
+    font-size: 12px; 
+  }
+
+  .card.flipped .card-back p {
+  transform: rotateY(0deg);
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+  /* CONTACT ME */
+  .kontak{
+    width: 100%;
+    padding: 30px 40px 40px 35px ;
+    margin-left: 7rem;
+  }
+  .kontak .content-kontak .right-side{
+   width: 75%;
+   margin-left: 7rem;
+}
+    .kontak{
+    margin: 40px 0;
+    height: 100%;
+  }
+  .kontak .content-kontak{
+    flex-direction: column-reverse;
+  }
+ .kontak .content-kontak .left-side{
+   width: 100%;
+   flex-direction: row;
+   margin-top: 40px;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .kontak .content-kontak .left-side::before{
+   display: none;
+ }
+ .kontak .content-kontak .right-side{
+   width: 100%;
+   margin-left: 0;
+ }
+}
+
