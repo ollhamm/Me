@@ -136,7 +136,7 @@
       <div class="skill" id="frontend-skill">
         <div class="icon-skill">
           <i class="fas fa-computer"></i>
-          <h4><span>Tolls </span>Skill</h4>
+          <h4><span>Tools </span>Skill</h4>
           <div class="content-skill">
             <div id="progressbarHtml">
               <div></div>
@@ -268,30 +268,43 @@
           aria-label="Slide 4"
         ></button>
       </div>
+
       <div class="carousel-inner">
-        <div class="carousel-item active text-center">
+        <div class="carousel-item active">
           <img
             src="img/klasifikasi.png"
             class="d-block mx-auto w-50"
-            alt="..."
+            alt="Slide 1"
+            data-bs-toggle="modal"
+            data-bs-target="#modalDeskripsi1"
           />
         </div>
         <div class="carousel-item">
           <img
             src="img/sentimenUlasan.png"
             class="d-block mx-auto w-50"
-            alt="..."
+            alt="Slide 2"
+            data-bs-toggle="modal"
+            data-bs-target="#modalDeskripsi2"
           />
         </div>
         <div class="carousel-item">
           <img
             src="img/movie_recomend.png"
             class="d-block mx-auto w-50"
-            alt="..."
+            alt="Slide 3"
+            data-bs-toggle="modal"
+            data-bs-target="#modalDeskripsi3"
           />
         </div>
         <div class="carousel-item">
-          <img src="img/dashboard.png" class="d-block mx-auto w-50" alt="..." />
+          <img
+            src="img/dashboard.png"
+            class="d-block mx-auto w-50"
+            alt="Slide 4"
+            data-bs-toggle="modal"
+            data-bs-target="#modalDeskripsi4"
+          />
         </div>
       </div>
       <button
@@ -300,10 +313,7 @@
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
       >
-        <span
-          class="carousel-control-prev-icon btn btn-primary"
-          aria-hidden="true"
-        ></span>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -312,20 +322,189 @@
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
       >
-        <span
-          class="carousel-control-next-icon btn btn-primary"
-          aria-hidden="true"
-        ></span>
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
 
+    <!-- Modal Deskripsi 1 -->
+    <div
+      class="modal fade"
+      id="modalDeskripsi1"
+      tabindex="-1"
+      aria-labelledby="modalDeskripsi1Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDeskripsi1Label">
+              Comparative Classification of Ants and Bees with Python on Google
+              Colab
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            I have created a classification project to compare ants and bees
+            using Python in Google Colab. This project uses machine learning
+            techniques to recognize important patterns from the data and
+            differentiate the two insects based on their unique characteristics.
+            By leveraging the Google Colab platform, I was able to optimize the
+            classification model with access to large computational resources.
+            The goal is to provide deeper insights into the differences and
+            similarities between ants and bees, and enrich our understanding of
+            insect ecosystems.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deskripsi 2 -->
+    <div
+      class="modal fade"
+      id="modalDeskripsi2"
+      tabindex="-1"
+      aria-labelledby="modalDeskripsi2Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDeskripsi2Label">
+              Training Review Sentiment Models using Next.js and Python
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            This project uses Next.js and Python to train Machine Learning
+            models that can analyze the sentiment of reviews. The goal is to
+            give users a deeper understanding of the reviews they read, to help
+            make better decisions.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deskripsi 3 -->
+    <div
+      class="modal fade"
+      id="modalDeskripsi3"
+      tabindex="-1"
+      aria-labelledby="modalDeskripsi3Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDeskripsi3Label">
+              Interactive Movie Recommendations with Next.js and Python
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Obviously, here is a shorter description for the project your movie
+            recommendation app project: "This movie recommendation app uses
+            Next.js and Python to train Machine Learning models. Users can
+            select a movie's genre, country, and year of release to get movie
+            recommendations that match their preferences. With Next.js
+            technology for frontend and Python for model training, the app
+            provides an interactive experience and models, the app provides an
+            interactive experience and relevant relevant recommendations for
+            users.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Deskripsi 4 -->
+    <div
+      class="modal fade"
+      id="modalDeskripsi4"
+      tabindex="-1"
+      aria-labelledby="modalDeskripsi4Label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalDeskripsi4Label">
+              Interactive Sales Dashboard with streamlit
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Dashboard Interaktif dengan Streamlit: Proyek ini menggunakan
+            Streamlit library Python untuk membuat dashboard yang menampilkan
+            data penjualan, pemasukan, dan informasi geolokasi pengguna pembeli
+            secara visual dan interaktif.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS dan dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <div class="porto">
-      <p>
-        This is my portfolio if you are interested in collaborating with me,<br />
-        or interested in using my services please contact me, I will always
-        welcome you.
-      </p>
+      <p>Click photo to see project description!!</p>
     </div>
     <!-- CONTAC ME -->
     <div class="contact" id="kontak">

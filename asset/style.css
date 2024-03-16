@@ -331,6 +331,30 @@ button:active {
     text-align: center;
     justify-content: center;
 }
+
+.porto {
+  margin-top: 2rem;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #0f72b4;
+  border-radius: 50%; /* Mengatur latar belakang menjadi melingkar */
+  width: 30px; /* Lebar tombol */
+  height: 30px; /* Tinggi tombol */
+  position: absolute; /* Mengatur posisi tombol */
+  top: 50%; /* Posisi vertikal di tengah (50%) */
+  transform: translateY(-50%); /* Menggeser tombol ke bawah sebesar setengah tingginya */
+  z-index: 9999; /* Mengatur urutan tampilan */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Posisi horizontal tombol prev */
+}
+
+.carousel-control-next {
+  right: 10px; /* Posisi horizontal tombol next */
+}
+
 .porto p {
   text-align: center;
   font-size: 12px;
