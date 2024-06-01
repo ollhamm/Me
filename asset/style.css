@@ -168,53 +168,82 @@ button:active {
   font-size: 16px;
 }
 
-/* HTML */
-#progressbarHtml {
+/* ML skill & Framework */
+/* Tensorflow */
+#progressbarTF {
   background-color: #7cb9e2;
   border-radius: 13px;
   padding: 3px;
 }
 
-#progressbarHtml>div {
+#progressbarTF>div {
   background-color: #0f72b4;
-  width: 70%;
+  width: 80%;
   height: 20px;
   border-radius: 10px;
 }
-/* CSS */
-#progressbarCss {
+/* keras */
+#progressbarKR {
   background-color: #7cb9e2;
   border-radius: 13px;
   padding: 3px;
 }
 
-#progressbarCss>div {
+#progressbarKR>div {
+  background-color: #0f72b4;
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+}
+/* Wearling */
+#progressbarWR {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarWR>div {
   background-color: #0f72b4;
   width: 85%;
   height: 20px;
   border-radius: 10px;
 }
-/* JS */
-#progressbarJs {
+/* Mining */
+#progressbarMN {
   background-color: #7cb9e2;
   border-radius: 13px;
   padding: 3px;
 }
 
-#progressbarJs>div {
+#progressbarMN>div {
   background-color: #0f72b4;
   width: 70%;
   height: 20px;
   border-radius: 10px;
 }
-/* REACT */
-#progressbarReact {
+
+/* Flask */
+#progressbarFLS {
   background-color: #7cb9e2;
   border-radius: 13px;
   padding: 3px;
 }
 
-#progressbarReact>div {
+#progressbarFLS>div {
+  background-color: #0f72b4;
+  width: 85%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Django */
+#progressbarDJ {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarDJ>div {
   background-color: #0f72b4;
   width: 40%;
   height: 20px;
@@ -222,22 +251,93 @@ button:active {
 }
 
 
-/* BACK END */
+/* Database */
 .icon-skill-backend{
   font-size: 20px;
 }
 .icon-skill-backend p{
   font-size: 16px;
 }
-#progressbarPy {
+/* JS */
+#progressbarJS {
   background-color: #7cb9e2;
   border-radius: 13px;
   padding: 3px;
 }
 
-#progressbarPy>div {
+#progressbarJS>div {
   background-color: #0f72b4;
-  width: 85%;
+  width: 70%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Python */
+#progressbarPYT {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarPYT>div {
+  background-color: #0f72b4;
+  width: 80%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* SQL */
+#progressbarSQL {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarSQL>div {
+  background-color: #0f72b4;
+  width: 65%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* NoSql */
+#progressbarNO {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarNO>div {
+  background-color: #0f72b4;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Mongo */
+#progressbarMONG {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarMONG>div {
+  background-color: #0f72b4;
+  width: 40%;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/* Postgre */
+#progressbarPSG {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbarPSG>div {
+  background-color: #0f72b4;
+  width: 70%;
   height: 20px;
   border-radius: 10px;
 }
@@ -466,9 +566,7 @@ button:active {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover{
-  background: #0f72b4;
-}
+
 
 
 /* DARK MODE */
