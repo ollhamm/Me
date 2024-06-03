@@ -101,44 +101,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Skill
 document.addEventListener("DOMContentLoaded", function () {
+  const aboutSection = document.querySelector(".about");
+  const imageAbout = document.querySelector(".image-about");
+  const textAbout = document.querySelector(".text-about");
   const skillSection = document.querySelector(".skill-container");
-  const progressBars = document.querySelectorAll(
+  const progressBars = skillSection.querySelectorAll(
     ".content-skill div[id^='progressbar'] > div"
   );
 
-  let animationStarted = false;
+  let aboutAnimationStarted = false;
+  let skillAnimationStarted = false;
 
-  function checkScroll() {
+  function checkAboutSection() {
+    const sectionPos = aboutSection.getBoundingClientRect().top;
+    const sectionBottom = aboutSection.getBoundingClientRect().bottom;
+    const screenPos = window.innerHeight / 1.3;
+
+    if (sectionPos < screenPos && sectionBottom > 0 && !aboutAnimationStarted) {
+      imageAbout.classList.add("active");
+      textAbout.classList.add("active");
+      aboutAnimationStarted = true;
+    } else if (sectionPos > screenPos || sectionBottom < 0) {
+      aboutAnimationStarted = false;
+    }
+  }
+
+  function checkSkillSection() {
     const skillSectionPos = skillSection.getBoundingClientRect().top;
     const skillSectionBottom = skillSection.getBoundingClientRect().bottom;
     const screenPos = window.innerHeight / 1.3;
 
-    if (skillSectionPos < screenPos && skillSectionBottom > 0) {
+    if (skillSectionPos < screenPos && skillSectionBottom > 0 && !skillAnimationStarted) {
       skillSection.classList.add("active");
       document.body.classList.add("locked");
-      if (!animationStarted) {
-        resetAnimations();
-        animationStarted = true;
-      }
-    } else {
-      skillSection.classList.remove("active");
-      document.body.classList.remove("locked");
-      animationStarted = false;
+      skillAnimationStarted = true;
+      resetAnimations(); 
+    } else if (skillSectionPos > screenPos || skillSectionBottom < 0) {
+      skillAnimationStarted = false;
     }
   }
 
   function resetAnimations() {
     progressBars.forEach((bar) => {
       bar.style.animation = "none";
-      void bar.offsetWidth; 
+      void bar.offsetWidth;
       bar.style.animation = "fillAnimation 2s ease-in-out forwards";
     });
   }
 
-  window.addEventListener("scroll", checkScroll);
+  window.addEventListener("scroll", () => {
+    checkAboutSection();
+    checkSkillSection();
+  });
+
+  resetAnimations();
 });
 
-// About Me
+
+// Services
 document.addEventListener("DOMContentLoaded", function () {
   const serviceSection = document.querySelector(".services");
   const cards = document.querySelectorAll(".card");

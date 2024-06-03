@@ -177,8 +177,6 @@ span{
 h1 {
   margin: 0;
   font-size: 3rem;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: bold;
 }
 p {
     font-size: 20px;
@@ -257,7 +255,7 @@ button:active {
   margin-bottom: 6rem;
   max-width: 300px; 
   transform: translateX(-100%);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.9s ease-in-out, transform 1s ease-in-out;
 }
 
 .image-about.active, .text-about.active {
