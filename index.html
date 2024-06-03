@@ -20,53 +20,89 @@
   </head>
   <body id="body">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid mx-5">
-        <a class="navbar-brand" href="#" style="font-family: 'Times New Roman';">Logo.</a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          id="navbarTogglerBtn"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link" href="#about" style="font-family: 'Times New Roman'">About</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link" href="#skill" style="font-family: 'Times New Roman'">Skill</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link" href="#service" style="font-family: 'Times New Roman'">Services</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link" href="#porto" style="font-family: 'Times New Roman'">Portofolio</a>
-            </li>
-            <li class="nav-item px-2">
-              <a class="nav-link" href="#kontak" style="font-family: 'Times New Roman'">ContacMe</a>
-            </li>
-            <button id="darkModeToggle">
-              <i class="fas fa-moon"></i>
-            </button>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg px-5">
+      <a class="navbar-brand" href="#" style="font-family: 'Times New Roman'"
+        >Logo.</a
+      >
+      <button
+        class="navbar-toggler border-0"
+        type="button"
+        id="navbarTogglerBtn"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Perubahan kelas di sini -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a
+              class="nav-link"
+              href="#about"
+              style="font-family: 'Times New Roman'"
+              >About</a
+            >
+          </li>
+          <li class="nav-item px-2">
+            <a
+              class="nav-link"
+              href="#skill"
+              style="font-family: 'Times New Roman'"
+              >Skill</a
+            >
+          </li>
+          <li class="nav-item px-2">
+            <a
+              class="nav-link"
+              href="#service"
+              style="font-family: 'Times New Roman'"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item px-2">
+            <a
+              class="nav-link"
+              href="#porto"
+              style="font-family: 'Times New Roman'"
+              >Portfolio</a
+            >
+          </li>
+          <li class="nav-item px-2">
+            <a
+              class="nav-link"
+              href="#kontak"
+              style="font-family: 'Times New Roman'"
+              >Contact Me</a
+            >
+          </li>
+          <button id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
+        </ul>
       </div>
     </nav>
 
     <!-- konten home -->
     <div class="container">
       <div class="content-left">
-  
-      <h1 style="font-family: 'Times New Roman', Times, serif;font-weight: bold;">Hi, I'am <span>Ilham</span></h1>
-        <p style="font-family: 'Times New Roman';"><span>Machine</span> Learning Engineer</p>
-        <p style="font-family: 'Times New Roman';">Junior level experience in machine learning<br /></p>
+        <h1
+          style="
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+          "
+        >
+          Hi, I'am <span>Ilham</span>
+        </h1>
+        <p><span>Machine</span> Learning Engineer</p>
+        <p>Junior level experience in machine learning<br /></p>
         <div class="hubungi_Kami">
-          <button id="contactButton" onclick="window.location.href='https://wa.me/6285877241815'">
+          <button
+            id="contactButton"
+            onclick="window.location.href='https://wa.me/6285877241815'"
+          >
             Contact Me
           </button>
         </div>
@@ -98,26 +134,25 @@
     </div>
 
     <!-- ABOUT ME -->
-    <div class="aboutMe" id="about">
+    <div class="aboutMe" id="about" style="margin-top: 8rem">
       <h3 style="font-family: 'Times New Roman'">About Me</h3>
     </div>
-    <div class="about">
+    <div class="about" style="margin-bottom: 14rem">
       <div class="image-about">
         <img src="img/ilham.png" alt="Your Image" />
       </div>
 
       <div class="text-about">
-        <p style="font-family: 'Times New Roman';">
+        <p style="font-family: 'Times New Roman'">
           Introducing,<span>I am Ilham Kusmayadi</span>, a 19-year-old<br />
-          and I live in Yogyakarta, I am a Machine Learning Engineer With
-          deep expertise in machine learning
-          
-            algorithm development and data analysis. Currently, I am studying at
-            <span>Amikom University Yogyakarta.</span>
-          
+          and I live in Yogyakarta, I am a Machine Learning Engineer With deep
+          expertise in machine learning algorithm development and data analysis.
+          Currently, I am studying at
+          <span>Amikom University Yogyakarta.</span>
+
           <br />
-          studying in the Informatics Engineering study program and
-          currently in the<span> 4th semester.</span><br />
+          studying in the Informatics Engineering study program and currently in
+          the<span> 4th semester.</span><br />
           <br />
         </p>
         <div class="download-cv">
@@ -129,13 +164,15 @@
     </div>
 
     <div class="skillMe" id="skill">
-      <h3 style="font-family: 'Times New Roman';">My Skill</h3>
+      <h3 style="font-family: 'Times New Roman'">My Skill</h3>
     </div>
-    <div class="skill-container">
+    <div class="skill-container" style="margin-bottom: 14rem">
       <div class="skill" id="frontend-skill">
         <div class="icon-skill">
           <i class="fa-solid fa-screwdriver-wrench"></i>
-          <h4 style="font-family: 'Times New Roman';" class="small mb-4">ML SkillS <span class="small">And</span> Framework</h4>
+          <h4 style="font-family: 'Times New Roman'" class="small mb-4">
+            ML SkillS <span class="small">And</span> Framework
+          </h4>
           <div class="content-skill">
             <div id="progressbarTF">
               <div></div>
@@ -168,7 +205,9 @@
       <div class="skill" id="backend-skill">
         <div class="icon-skill-backend">
           <i class="fas fa-computer"></i>
-          <h4 style="font-family: 'Times New Roman';" class="small mb-4">Language <span>And </span>Database</h4>
+          <h4 style="font-family: 'Times New Roman'" class="small mb-4">
+            Language <span>And </span>Database
+          </h4>
           <div class="content-skill">
             <div id="progressbarJS">
               <div></div>
@@ -200,36 +239,43 @@
     </div>
     <!--SERVICES-->
     <div class="services" id="service">
-      <h3 style="font-family: 'Times New Roman';">services</h3>
+      <h3 style="font-family: 'Times New Roman'">services</h3>
     </div>
-    <div class="card-container">
+    <div class="card-container" style="margin-bottom: 14rem">
       <div class="card border-0" onclick="flipCard(this)">
         <div class="card-content">
           <i class="fa-solid fa-diagram-project"></i>
-          <p style="font-family: 'Times New Roman';">Problem <br/> Solving</p>
+          <p style="font-family: 'Times New Roman'">
+            Problem <br />
+            Solving
+          </p>
         </div>
         <div class="card-back">
-          <p style="font-family: 'Times New Roman';">I have good problem-solving skills.</p>
+          <p style="font-family: 'Times New Roman'">
+            I have good problem-solving skills.
+          </p>
         </div>
       </div>
 
       <div class="card border-0" onclick="flipCard(this)">
         <div class="card-content">
           <i class="fa-solid fa-clock"></i>
-          <p style="font-family: 'Times New Roman';">On Time</p>
+          <p style="font-family: 'Times New Roman'">On Time</p>
         </div>
         <div class="card-back">
-          <p style="font-family: 'Times New Roman';">I am known as an individual who completes tasks on time.</p>
+          <p style="font-family: 'Times New Roman'">
+            I am known as an individual who completes tasks on time.
+          </p>
         </div>
       </div>
 
       <div class="card border-0" onclick="flipCard(this)">
         <div class="card-content">
           <i class="fa-solid fa-user-group"></i>
-          <p style="font-family: 'Times New Roman';">Responsi<br/>bility</p>
+          <p style="font-family: 'Times New Roman'">Responsi<br />bility</p>
         </div>
         <div class="card-back">
-          <p style="font-family: 'Times New Roman';">
+          <p style="font-family: 'Times New Roman'">
             I am known as an individual who takes full responsibility for my
             tasks.
           </p>
@@ -239,7 +285,7 @@
 
     <!-- porto -->
     <div class="porto mb-5" id="porto">
-      <h3 style="font-family: 'Times New Roman';">Portofolio</h3>
+      <h3 style="font-family: 'Times New Roman'">Portofolio</h3>
     </div>
 
     <div
@@ -514,7 +560,7 @@
       <p>Click photo to see project description!!</p>
     </div>
     <!-- CONTAC ME -->
-    <div class="contact" id="kontak">
+    <div class="contact" id="kontak" style="margin-top: 20rem">
       <h3 style="font-family: 'Times New Roman'">Contact Me</h3>
     </div>
     <div class="kontak">
@@ -524,7 +570,7 @@
             <i class="fas fa-map-marker-alt"></i>
             <div class="topic">Address</div>
             <div class="text-one">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
             <div class="text-two"></div>
           </div>
@@ -540,10 +586,13 @@
           </div>
         </div>
         <div class="right-side">
-          <div class="topic-text">Send us a message</div>
+          <div class="topic-text" style="font-family: 'Times New Roman'">
+            Send us a message
+          </div>
           <p>
             If you have any work from me or any type of questions related to the
-            you can send me a message from here. It will be my pleasure to help you.
+            you can send me a message from here. It will be my pleasure to help
+            you.
           </p>
           <form
             action="mailto:lifehelper1733@gmail.com"
@@ -565,9 +614,12 @@
       </div>
     </div>
     <!-- footer -->
-    <footer class="text-light p-4 text-center small" style="background-color: #0f72b4;">
-        <p>&copy; 2023 ollhamm</p>
-    </footer>    
+    <footer
+      class="text-light p-4 text-center small"
+      style="background-color: #0f72b4"
+    >
+      <p>&copy; 2023 ollhamm</p>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

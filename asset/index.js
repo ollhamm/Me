@@ -1,6 +1,35 @@
 $(document).ready(function () {
-  $("#darkModeToggle").click(function () {
-    $("body").toggleClass("dark-mode");
+  const darkModeToggle = $("#darkModeToggle");
+  const body = $("body");
+  const moonIcon = darkModeToggle.find(".fa-moon");
+  const sunIcon = darkModeToggle.find(".fa-sun");
+
+  function toggleIcons() {
+    if (body.hasClass("dark-mode")) {
+      moonIcon.hide();
+      sunIcon.show();
+    } else {
+      moonIcon.show();
+      sunIcon.hide();
+    }
+  }
+
+  const darkModePreference = localStorage.getItem("darkMode");
+  if (darkModePreference === "dark") {
+    body.addClass("dark-mode");
+    toggleIcons();
+  }
+
+  darkModeToggle.click(function () {
+    body.toggleClass("dark-mode");
+    toggleIcons();
+
+    const mode = body.hasClass("dark-mode") ? "dark" : "light";
+    localStorage.setItem("darkMode", mode);
+  });
+
+  $("#navbarTogglerBtn").click(function () {
+    toggleIcons();
   });
 });
 
@@ -13,7 +42,6 @@ navbarTogglerBtn.addEventListener("click", () => {
 });
 
 //  download CV
-
 function downloadCV() {
   var cvPath = "cv/cv_ilham.pdf";
 
@@ -38,27 +66,22 @@ function flipCard(card) {
   card.classList.toggle("flipped");
 
   if (openCard && openCard !== card) {
-    // Menutup kartu yang sebelumnya terbuka
     openCard.classList.remove("flipped");
   }
 
-  // Menyimpan kartu yang baru saja dibuka
   openCard = card.classList.contains("flipped") ? card : null;
 }
 
-// menutup hamburger mneu
 document.addEventListener("DOMContentLoaded", function () {
   var body = document.getElementById("body");
   var navbarTogglerBtn = document.getElementById("navbarTogglerBtn");
   var navbarNav = document.getElementById("navbarNav");
 
-  // Fungsi untuk menutup menu jika diklik di luar area hamburger menu
   function closeMenu() {
     navbarTogglerBtn.classList.add("collapsed");
     navbarNav.classList.remove("show");
   }
 
-  // Event listener untuk mendeteksi klik di luar area hamburger menu
   body.addEventListener("click", function (event) {
     var isClickInsideNavbar =
       navbarNav.contains(event.target) ||
@@ -68,12 +91,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Event listener untuk menutup menu ketika salah satu item di dalam menu diklik
   navbarNav.addEventListener("click", function () {
     closeMenu();
   });
 });
-
 
 // About Me
 document.addEventListener("DOMContentLoaded", function () {
@@ -97,7 +118,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", checkScroll);
 });
-
 
 // Skill
 document.addEventListener("DOMContentLoaded", function () {
@@ -131,11 +151,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const skillSectionBottom = skillSection.getBoundingClientRect().bottom;
     const screenPos = window.innerHeight / 1.3;
 
-    if (skillSectionPos < screenPos && skillSectionBottom > 0 && !skillAnimationStarted) {
-      skillSection.classList.add("active");
+    if (
+      skillSectionPos < screenPos &&
+      skillSectionBottom > 0 &&
+      !skillAnimationStarted
+    ) {
       document.body.classList.add("locked");
       skillAnimationStarted = true;
-      resetAnimations(); 
+      resetAnimations();
     } else if (skillSectionPos > screenPos || skillSectionBottom < 0) {
       skillAnimationStarted = false;
     }
@@ -145,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
     progressBars.forEach((bar) => {
       bar.style.animation = "none";
       void bar.offsetWidth;
-      bar.style.animation = "fillAnimation 2s ease-in-out forwards";
+      bar.style.animation = "fillAnimation 1s ease-in-out forwards";
     });
   }
 
@@ -157,8 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
   resetAnimations();
 });
 
-
-// Services
+// Service
 document.addEventListener("DOMContentLoaded", function () {
   const serviceSection = document.querySelector(".services");
   const cards = document.querySelectorAll(".card");
@@ -184,8 +206,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkScroll);
 });
 
-
-
 // icon
 document.addEventListener("DOMContentLoaded", function () {
   const icons = document.querySelectorAll(".icon a");
@@ -199,6 +219,3 @@ document.addEventListener("DOMContentLoaded", function () {
     index = (index + 1) % icons.length;
   }, 1000);
 });
-
-
-

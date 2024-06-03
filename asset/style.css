@@ -84,34 +84,6 @@ footer {
   animation: slideInLeft 0.9s ease-in-out;
 }
 
-
-/* About me */
-@keyframes slideInLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-
-
-
-
 #darkModeToggle {
   background: none;
   border: none;
@@ -190,12 +162,8 @@ p {
     width: 115px;
     height: 50px;
 }
-button:hover {
-  background-color: rgb(14, 54, 97);
-}
-button:active {
-    transform: scale(0.95);
-}
+
+
 
 .content-right {
   margin-left: 20px; 
@@ -235,12 +203,20 @@ button:active {
     margin-left: 1rem;
 }
 
+.aboutMe {
+  text-align: center; /* Posisikan teks ke tengah */
+}
+
 /* ABOUT ME */
 .aboutMe h3{
     margin-top: 12rem;
     padding-bottom: 5px;
     text-align: center;
     justify-content: center;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 .about {
     display: flex;
@@ -249,6 +225,7 @@ button:active {
     justify-content: space-between;
     margin: 20px; 
     padding: 8rem;
+    animation: slideInLeft 0.7s ease-in-out;
 }
 .image-about {
   flex: 1; 
@@ -291,41 +268,30 @@ button:active {
 }
 
 
-/* animasi Skill */
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 /* SKILL KONTAINER */
 .skill-container {
   display: flex;
   justify-content: space-between;
-  overflow-x: hidden;
-  transform: translateX(100%);
-  transition: ease-in-out, transform 0.9s ease-in-out;
-}
-
-
-.skill-container.active {
-  transform: translateX(0);
 }
 
 .skill {
   width: 45%; 
 }
 
+.skillMe{
+  text-align: center;
+}
+
+
 /* SKILL */
 .skillMe h3{
     margin-top: 10rem;
     text-align: center;
     justify-content: center;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 .skill {
     display: flex;
@@ -365,7 +331,7 @@ button:active {
   padding: 10px;
   top: 0;
   left: 0;
-  animation: fillAnimation 2s ease-in-out forwards; 
+  animation: fillAnimation 0.5s ease-in-out forwards; 
 }
 
 
@@ -452,11 +418,19 @@ button:active {
   width: var(--progress-width);
 }
 
+.services{
+  text-align: center;
+}
+
 /* SERVICES */
 .services h3{
     margin-top: 5rem;
     text-align: center;
     justify-content: center;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 .card-container {
   display: flex;
@@ -464,17 +438,6 @@ button:active {
   margin-top: 5rem;
   animation: slideInLeft 0.5s ease-in-out;
 }
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .card {
   width: 300px;
   border: 1px solid #ccc;
@@ -545,12 +508,19 @@ button:active {
   margin: 2px;
 }
 
+.porto {
+  text-align: center;
+}
 /* porto */
 .porto h3{
     margin-top: 9rem;
     padding-bottom: 5px;
     text-align: center;
     justify-content: center;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 
 .porto {
@@ -590,12 +560,18 @@ button:active {
   align-items: center;
 }
 
+.contact{
+  text-align: center;
+}
 /* CONTACT ME */
 .contact h3{
-    margin-top: 14rem;
     padding-bottom: 5px;
     text-align: center;
     justify-content: center;
+    color: grey;
+    border-bottom: 1px solid #ccc;
+    display: inline-block; 
+    padding-bottom: 5px;
 }
 
 .kontak{
@@ -728,9 +704,10 @@ button:active {
 .dark-mode .icon i {
     color: #0f72b4;
 }
-.dark-mode .navbar-toggler{
-    color: #fff;
-    background-color: #fff;
+.dark-mode .navbar-toggler-icon {
+  color: #0f72b4; 
+  background-color: #000; 
+  font-weight: bold;
 }
 .dark-mode .card {
     color: #0f72b4;
@@ -740,6 +717,23 @@ button:active {
   background-color: #000;
 }
 
+/* icon start */
+.fa-moon {
+  display: inline-block; 
+}
+
+.fa-sun {
+  display: none; 
+}
+
+.dark-mode .fa-moon {
+  display: none; 
+}
+
+.dark-mode .fa-sun {
+  display: inline-block; 
+}
+/* icon end */
 
 
 
@@ -756,13 +750,6 @@ button:active {
     align-items: center;
     animation: slideInLeft 0.8s ease-in-out;
   }
-  .skill-container {
-    display: flex;
-    justify-content: space-between;
-    overflow-x: hidden;
-    transform: translateX(100%);
-    transition: ease-in-out, transform 0.9s ease-in-out;
-  }
 
   .content-left {
     margin-left: 0;
@@ -774,7 +761,7 @@ button:active {
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .circle {
@@ -833,65 +820,58 @@ button:active {
   .progress-bar-container>div {
     height: 10px;
   }
-   .icon-skill-backend {
+.icon-skill-backend {
     font-size: 12px;
     margin-right: 0;
     margin-bottom: 1rem;
   }
-   .card {
+.card {
     width: 100%;
   }
 
-  .card-content {
+.card-content {
     font-size: 20px; 
   }
-  .card-content p{
+.card-content p{
     font-size: 12px; 
   }
 
-  .card.flipped .card-back p {
+.card.flipped .card-back p {
   transform: rotateY(0deg);
   margin-left: 1.5rem;
   text-align: center;
 }
 
   /* CONTACT ME */
-  .kontak{
+.kontak{
     width: 100%;
     padding: 30px 40px 40px 35px ;
     margin-left: 7rem;
   }
-  .kontak .content-kontak .right-side{
+.kontak .content-kontak .right-side{
    width: 75%;
    margin-left: 7rem;
 }
-    .kontak{
+.kontak{
     margin: 40px 0;
     height: 100%;
   }
-  .kontak .content-kontak{
+.kontak .content-kontak{
     flex-direction: column-reverse;
   }
- .kontak .content-kontak .left-side{
+.kontak .content-kontak .left-side{
    width: 100%;
    flex-direction: row;
    margin-top: 40px;
    justify-content: center;
    flex-wrap: wrap;
  }
- .kontak .content-kontak .left-side::before{
+.kontak .content-kontak .left-side::before{
    display: none;
  }
- .kontak .content-kontak .right-side{
+.kontak .content-kontak .right-side{
    width: 100%;
    margin-left: 0;
- }
-
- .skill-container {
-  display: flex;
-  justify-content: space-between;
-  transform: translateX(100%);
-  transition: ease-in-out, transform 0.9s ease-in-out;
 }
 }
 
