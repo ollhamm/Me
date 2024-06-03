@@ -3,13 +3,134 @@ body {
   justify-content: center;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   height: 100vh;
+  
+}
+
+footer {
+  position: relative;
+  z-index: 10; /* Adjust based on the z-index of overlapping elements */
+  background-color: #0f72b4;
+  color: white;
 }
 
 #navbarTogglerBtn:focus {
     outline: none;
     box-shadow: none;
 }
+/* Define the keyframe animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/* Apply the animation to the navbar */
+.navbar {
+  animation: slideDown 1s ease-in-out;
+  position: relative; 
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  transition: color 0.3s;
+}
+
+ .nav-link:hover {
+      color: #0f72b4;
+    }
+
+    .nav-link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #0f72b4;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+
+/* home */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.content-left, .content-right {
+  flex: 1;
+}
+.container {
+  display: flex;
+  align-items: center;
+  animation: slideInLeft 0.9s ease-in-out;
+}
+
+
+/* About me */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+#darkModeToggle i {
+  font-size: 1.5rem;
+}
+
+.container-fluid {
+  background-color: #fff; 
+}
+
+.navbar-toggler:focus, #darkModeToggle:focus {
+  outline: none;
+}
+
 
 
 
@@ -45,10 +166,6 @@ span{
 .bg-image:hover img {
   transform: scale(1.2);
 }
-.container {
-  display: flex;
-  align-items: center;
-}
 
 /* Home kiri */
 .content-left {
@@ -60,6 +177,8 @@ span{
 h1 {
   margin: 0;
   font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 p {
     font-size: 20px;
@@ -72,6 +191,9 @@ p {
     border-radius: 10px;
     width: 115px;
     height: 50px;
+}
+button:hover {
+  background-color: rgb(14, 54, 97);
 }
 button:active {
     transform: scale(0.95);
@@ -87,6 +209,30 @@ button:active {
     font-size: 30px;
     color: #000;
 }
+
+.icon a {
+  display: inline-block;
+  transition: transform 0.1s ease-in-out;
+}
+
+.icon a:hover {
+  transform: translateY(-5px); 
+}
+
+.animated {
+  animation: jumpAnimation 1s infinite alternate; 
+}
+
+@keyframes jumpAnimation {
+  0%, 100% { transform: translateY(0); } 
+  50% { transform: translateY(-10px); } 
+}
+
+.icon a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+
 .icon a:not(:first-child) {
     margin-left: 1rem;
 }
@@ -110,7 +256,15 @@ button:active {
   flex: 1; 
   margin-bottom: 6rem;
   max-width: 300px; 
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
+.image-about.active, .text-about.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .image-about img {
         width: 100%;
         height: auto;
@@ -120,6 +274,8 @@ button:active {
  .text-about{
         flex: 1; 
         max-width: 500px; 
+        transform: translateX(-100%);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
 
 /*BUTTON DOWNLOAD */
@@ -136,10 +292,31 @@ button:active {
     transform: scale(0.95);
 }
 
+
+/* animasi Skill */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 /* SKILL KONTAINER */
 .skill-container {
   display: flex;
   justify-content: space-between;
+  overflow-x: hidden;
+  transform: translateX(100%);
+  transition: ease-in-out, transform 0.9s ease-in-out;
+}
+
+
+.skill-container.active {
+  transform: translateX(0);
 }
 
 .skill {
@@ -168,86 +345,69 @@ button:active {
   font-size: 16px;
 }
 
-/* ML skill & Framework */
-/* Tensorflow */
-#progressbarTF {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
+/* animasi persentase */
+@keyframes fillAnimation {
+  0% { width: 0; } 
+  100% { width: var(--progress-width); } 
 }
 
-#progressbarTF>div {
+.content-skill div[id^="progressbar"] {
+  background-color: #7cb9e2;
+  border-radius: 13px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.content-skill div[id^="progressbar"] > div {
   background-color: #0f72b4;
-  width: 80%;
-  height: 20px;
-  border-radius: 10px;
+  border-radius: 15px; 
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  animation: fillAnimation 2s ease-in-out forwards; 
+}
+
+
+.content-skill p {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* tensorflow */
+#progressbarTF>div {
+  --progress-width: 80%; 
+  width: var(--progress-width);
+  
 }
 /* keras */
-#progressbarKR {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarKR>div {
-  background-color: #0f72b4;
-  width: 80%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 70%; 
+  width: var(--progress-width);
 }
 /* Wearling */
-#progressbarWR {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarWR>div {
-  background-color: #0f72b4;
-  width: 85%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 85%; 
+  width: var(--progress-width);
 }
 /* Mining */
-#progressbarMN {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarMN>div {
-  background-color: #0f72b4;
-  width: 70%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 65%; 
+  width: var(--progress-width);
 }
 
 /* Flask */
-#progressbarFLS {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarFLS>div {
-  background-color: #0f72b4;
-  width: 85%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 85%; 
+  width: var(--progress-width);
 }
 
 /* Django */
-#progressbarDJ {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarDJ>div {
-  background-color: #0f72b4;
-  width: 40%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 40%; 
+  width: var(--progress-width);
 }
 
 
@@ -259,87 +419,39 @@ button:active {
   font-size: 16px;
 }
 /* JS */
-#progressbarJS {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarJS>div {
-  background-color: #0f72b4;
-  width: 70%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 60%; 
+  width: var(--progress-width);
 }
 
 /* Python */
-#progressbarPYT {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarPYT>div {
-  background-color: #0f72b4;
-  width: 80%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 80%; 
+  width: var(--progress-width);
 }
 
 /* SQL */
-#progressbarSQL {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarSQL>div {
-  background-color: #0f72b4;
-  width: 65%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 77%; 
+  width: var(--progress-width);
 }
 
 /* NoSql */
-#progressbarNO {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarNO>div {
-  background-color: #0f72b4;
-  width: 40%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 35%; 
+  width: var(--progress-width);
 }
 
 /* Mongo */
-#progressbarMONG {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarMONG>div {
-  background-color: #0f72b4;
-  width: 40%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 30%; 
+  width: var(--progress-width);
 }
 
 /* Postgre */
-#progressbarPSG {
-  background-color: #7cb9e2;
-  border-radius: 13px;
-  padding: 3px;
-}
-
 #progressbarPSG>div {
-  background-color: #0f72b4;
-  width: 70%;
-  height: 20px;
-  border-radius: 10px;
+  --progress-width: 78%; 
+  width: var(--progress-width);
 }
 
 /* SERVICES */
@@ -352,6 +464,17 @@ button:active {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  animation: slideInLeft 0.5s ease-in-out;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .card {
@@ -438,27 +561,37 @@ button:active {
 .carousel-control-prev,
 .carousel-control-next {
   background-color: #0f72b4;
-  border-radius: 50%; /* Mengatur latar belakang menjadi melingkar */
-  width: 30px; /* Lebar tombol */
-  height: 30px; /* Tinggi tombol */
-  position: absolute; /* Mengatur posisi tombol */
-  top: 50%; /* Posisi vertikal di tengah (50%) */
-  transform: translateY(-50%); /* Menggeser tombol ke bawah sebesar setengah tingginya */
-  z-index: 9999; /* Mengatur urutan tampilan */
+  border-radius: 50%; 
+  width: 30px; 
+  height: 30px; 
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%); 
+  z-index: 9999; 
 }
 
 .carousel-control-prev {
-  left: 10px; /* Posisi horizontal tombol prev */
+  left: 10px; 
 }
 
 .carousel-control-next {
-  right: 10px; /* Posisi horizontal tombol next */
+  right: 10px; 
 }
 
 .porto p {
   text-align: center;
   font-size: 12px;
 }
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #0f72b4;
+  border-radius: 50%;
+  width: 30px; 
+  height: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* CONTACT ME */
 .contact h3{
     margin-top: 14rem;
@@ -466,6 +599,7 @@ button:active {
     text-align: center;
     justify-content: center;
 }
+
 .kontak{
   margin-top: 10rem;
   width: 100%;
@@ -608,11 +742,28 @@ button:active {
   background-color: #000;
 }
 
+
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
+
+  .navbar {
+    animation: slideDown 1s ease-in-out;
+    position: relative; 
+  }
+
   .container {
     flex-direction: column;
     align-items: center;
+    animation: slideInLeft 0.8s ease-in-out;
+  }
+  .skill-container {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    transform: translateX(100%);
+    transition: ease-in-out, transform 0.9s ease-in-out;
   }
 
   .content-left {
@@ -737,5 +888,12 @@ button:active {
    width: 100%;
    margin-left: 0;
  }
+
+ .skill-container {
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(100%);
+  transition: ease-in-out, transform 0.9s ease-in-out;
+}
 }
 
