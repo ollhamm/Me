@@ -231,8 +231,6 @@ p {
   flex: 1; 
   margin-bottom: 6rem;
   max-width: 300px; 
-  transform: translateX(-100%);
-  transition: opacity 0.9s ease-in-out, transform 1s ease-in-out;
 }
 
 .image-about.active, .text-about.active {
@@ -342,35 +340,35 @@ button:active {
 
 /* tensorflow */
 #progressbarTF>div {
-  --progress-width: 80%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
   
 }
 /* keras */
 #progressbarKR>div {
-  --progress-width: 70%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 /* Wearling */
 #progressbarWR>div {
-  --progress-width: 85%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 /* Mining */
 #progressbarMN>div {
-  --progress-width: 65%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* Flask */
 #progressbarFLS>div {
-  --progress-width: 85%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* Django */
 #progressbarDJ>div {
-  --progress-width: 40%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
@@ -384,37 +382,37 @@ button:active {
 }
 /* JS */
 #progressbarJS>div {
-  --progress-width: 60%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* Python */
 #progressbarPYT>div {
-  --progress-width: 80%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* SQL */
 #progressbarSQL>div {
-  --progress-width: 77%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* NoSql */
 #progressbarNO>div {
-  --progress-width: 35%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* Mongo */
 #progressbarMONG>div {
-  --progress-width: 30%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
 /* Postgre */
 #progressbarPSG>div {
-  --progress-width: 78%; 
+  --progress-width: 100%; 
   width: var(--progress-width);
 }
 
