@@ -43,7 +43,7 @@ navbarTogglerBtn.addEventListener("click", () => {
 
 //  download CV
 function downloadCV() {
-  var cvPath = "cv/My_cv.pdf";
+  var cvPath = "cv/cv_ilham.pdf";
 
   var link = document.createElement("a");
   link.href = cvPath;
